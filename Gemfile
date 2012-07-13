@@ -6,6 +6,7 @@ group :development do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
+  gem 'guard-spork'
 end
 
 group :assets do
@@ -20,6 +21,7 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.4.3.1'
   gem 'growl', '1.0.3'
+  gem 'spork-rails'
 end
 
 group :production do

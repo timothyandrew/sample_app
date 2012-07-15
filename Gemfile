@@ -25,6 +25,7 @@ group :test do
   gem 'rb-fsevent', '0.4.3.1'
   gem 'growl', '1.0.3'
   gem 'spork-rails'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do

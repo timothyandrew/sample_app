@@ -8,6 +8,7 @@ group :development do
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
   gem 'guard-spork'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 group :assets do

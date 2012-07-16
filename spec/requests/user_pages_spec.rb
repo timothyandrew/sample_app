@@ -13,6 +13,22 @@ describe "User pages" do
     describe "with invalid information" do
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
+      end
+
+      describe "after submission" do
+        before do
+          fill_in "Name", with: "Example User"
+          fill_in "Email", with: "user@example.com"
+          fill_in "Password", with: "foo"
+          fill_in "Confirmation", with: "foobar"
+          click_button submit
+        end
+        subject { page }
+
+        it { should have_selector 'title', text: 'Sign up'}
+        it { should have_content 'error' }
+        it { should have_selector 'div#error_explanation' }
+        it { should have_selector 'div#error_explanation ul' }
       end      
     end
 
